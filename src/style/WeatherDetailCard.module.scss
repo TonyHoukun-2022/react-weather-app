@@ -1,0 +1,79 @@
+@import "./Variables.scss";
+.cardContainer {
+  width: 800px;
+  background-color: $weatherCardBackgroundColor;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  .weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px rgb(230, 230, 230) solid;
+    .tempratureContainer {
+      width: 200px;
+      .cityName {
+        font-size: 40px;
+        margin: 0;
+        font-weight: bold;
+      }
+      .temprature {
+        font-size: 40px;
+        margin: 10px 0;
+      }
+
+      .minMax {
+        font-size: 15px;
+        margin: 30px 0;
+      }
+    }
+
+    .iconContainer {
+      .icon {
+        width: 200px;
+      }
+    }
+  }
+  .detailInfo {
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    p {
+      width: 200px;
+      margin: 0px;
+      margin-bottom: 30px;
+      text-align: left;
+      b {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@include media($phone) {
+  .cardContainer {
+    width: 90%;
+    height: 80%;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+    .weather {
+      flex-direction: column-reverse;
+      .tempratureContainer {
+        text-align: center;
+      }
+    }
+    .detailInfo {
+      text-align: center;
+      p {
+        b {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}

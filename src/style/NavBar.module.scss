@@ -1,0 +1,26 @@
+.navBarContainer {
+  width: 100vw;
+  height: 40px;
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+
+  section {
+    width: 100px;
+
+    .addBtn {
+      width: 80px;
+      color: rgb(221, 221, 221);
+      background-color: rgb(100, 100, 100);
+      box-shadow: rgb(202, 202, 202) 0px 0px 2px;
+      border-radius: 20px;
+      cursor: pointer;
+      padding: 5px 0;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "./Variables.scss";
+
+.container {
+  background-color: $weatherCardBackgroundColor;
+  padding: 40px 30px;
+  width: 270px;
+  height: 350px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgb(143, 143, 143) 0px 0px 20px;
+  margin: 0 35px;
+  cursor: pointer;
+
+  .cityName {
+    @include Title();
+  }
+
+  .weatherIcon {
+    width: 150px;
+  }
+
+  .temprature {
+    font-size: 40px;
+    margin: 5px;
+  }
+
+  .weatherText {
+    font-size: 20px;
+  }
+
+  .delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+  }
+}
